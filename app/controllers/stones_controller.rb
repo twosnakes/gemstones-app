@@ -25,5 +25,23 @@ class StonesController < ApplicationController
     @stone = Stone.find(params[:id])
   end
 
+  def update
+    stone = Stone.find(params[:id])
+    stone.assign_attributes(
+                            name: params[:name],
+                            properties: params[:properties]
+                            )
+    stone.save
+
+    redirect_to "/stones/#{stone.id}"
+
+  end
+
+  def destroy
+    stone = Stone.find(params[:id])
+
+    redirect_to '/'
+  end
+
 
 end
