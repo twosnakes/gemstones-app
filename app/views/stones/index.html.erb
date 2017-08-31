@@ -1,10 +1,8 @@
 
-<% @stone.each do |stone| %>
+<% @stones.each do |stone| %>
   <div>
     <h2>Name: <a href="/stones/<%= stone.id %>"> <%= stone.name %> Properties: <%= stone.properties %></a></h2>
   </div>
-<!--   <div>
-    <img src="<%= stone.image %>">
-  </div> -->
+
 
 <% end %>
